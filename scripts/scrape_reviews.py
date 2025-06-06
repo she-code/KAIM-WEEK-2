@@ -33,15 +33,15 @@ def scrape_play_store_reviews(app_id, bank_name, output_dir):
 
         # Write to CSV
         with open(filepath, mode='w', newline='', encoding='utf-8') as file:
-            writer = csv.DictWriter(file, fieldnames=['review_text', 'rating', 'date', 'bank_name', 'source'])
+            writer = csv.DictWriter(file, fieldnames=['review', 'rating', 'date', 'bank', 'source'])
             writer.writeheader()
 
             for entry in results:
                 writer.writerow({
-                    'review_text': entry['content'],
+                    'review': entry['content'],
                     'rating': entry['score'],
                     'date': entry['at'].strftime('%Y-%m-%d'),
-                    'bank_name': bank_name,
+                    'bank': bank_name,
                     'source': 'Google Play'
                 })
 
