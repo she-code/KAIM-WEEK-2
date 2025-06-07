@@ -13,7 +13,37 @@ We focus on the Google Play Store reviews for the following Ethiopian banking ap
 | Bank of Abyssinia           | `com.boa.boaMobileBanking`          |
 | Dashen Bank                 | `com.dashen.dashensuperapp`         |
 
+## Project Structure
+
 ---
+KAIM-WEEK-2/
+├── .github/
+│   └── workflows/            # GitHub Actions workflows
+├── data/
+│   ├── raw/                  # Raw data (should never be modified)
+│   └── processed/            # Processed/cleaned data (gitignored)
+├── notebooks/
+│   ├── data_preprocess.ipynb # Data preprocessing notebook
+│   ├── sentiment_thematic_analysis.ipynb # Analysis notebook
+│   └── README.md             # Documentation for notebooks
+├── scripts/
+│   ├── scrape_reviews.py     # Web scraping script
+│   ├── preprocess_reviews.py # Data preprocessing script
+│   ├── scraper.log           # Log file from scraping
+│   └── README.md             # Documentation for scripts
+├── src/
+│   ├── data_loader.py        # Data loading utilities
+│   ├── data_preprocessor.py  # Data preprocessing utilities
+│   ├── sentiment_analyzers.py # Sentiment analysis logic
+│   └── utils/               # Utility functions
+│   └── README.md            # Documentation for source code
+├── tests/
+│   ├── test_preprocess.py    # Tests for preprocessing
+│   └── README.md            # Testing documentation
+├── .gitattributes
+├── .gitignore
+├── README.md                 # Main project documentation
+└── requirements.txt          # Python dependencies
 
 ## Tech Stack
 
