@@ -23,9 +23,13 @@ KAIM-WEEK-2/
 ├── data/
 │ ├── raw/ # Raw data (should never be modified)
 │ └── processed/ # Processed/cleaned data (gitignored)
+├── dumps/
+│ ├── bank_review.dump.sql
 ├── notebooks/
 │ ├── data_preprocess.ipynb # Data preprocessing notebook
 │ ├── sentiment_thematic_analysis.ipynb # Analysis notebook
+│ ├── store_cleaned_reviews.ipynb # stores in db
+│ ├── insights_recommendations.ipynb # inshigts and visulaizations notebook
 │ └── README.md # Documentation for notebooks
 ├── scripts/
 │ ├── scrape_reviews.py # Web scraping script
@@ -106,3 +110,27 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 ```
+4. **Database Integration (Oracle XE)**
+
+### 2. Setup Oracle XE
+1. Install Oracle XE locally or on a VM (see: Oracle XE Downloads)
+2. Note your connection info:
+    - Host: localhost
+    - Port: 1521
+    - Service name: XEPDB1
+    - Username & password
+
+
+## Deliverables
+- Cleaned dataset of app reviews
+
+- Sentiment analysis results
+
+- Thematic clusters (e.g., login issues, slow updates, crashes)
+
+- Visualizations (sentiment pie chart, word clouds, rating histograms)
+
+- Recommendations per bank
+
+## Contributors
+- Frehiwot Abebie
