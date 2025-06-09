@@ -24,7 +24,7 @@ This folder contains Jupyter notebooks demonstrating the usage and exploration o
   - Grouping reviews into categories like user experience, app performance, mobile banking, and more
   - Producing enriched output datasets for reporting and visualization
 
-## 🗄️ store_cleaned_reviews_oracle.ipynb
+## store_cleaned_reviews_oracle.ipynb
 
 - This notebook demonstrates how to store cleaned and processed bank review data into an **Oracle XE** database using `cx_Oracle`.
 - It includes:
@@ -33,6 +33,16 @@ This folder contains Jupyter notebooks demonstrating the usage and exploration o
   - Insertion of >1,000 cleaned reviews from CSV
   - Sample queries to verify data persistence
   - Full SQL dump generation for versioning and GitHub
+
+## insights_recommendations.ipynb
+
+- This notebook explores insights from cleaned and processed bank review data.
+- It includes:
+  - Analysis of sentiment scores and identified themes
+  - Visualizations such as sentiment distributions, rating trends, and keyword frequencies
+  - Identification of key drivers and pain points from user reviews
+  - Actionable product and UX recommendations based on feedback
+  - Ethical considerations regarding bias in user reviews
 
 ## Running Notebooks
 
