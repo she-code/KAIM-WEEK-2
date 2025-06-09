@@ -110,34 +110,27 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 ```
-4. **Database Integration (Oracle XE)**
 
-### 1. Setup Oracle XE
-    1. Install Oracle XE locally or on a VM (see: Oracle XE Downloads)
-    2. Note your connection info:
-    - Host: localhost
-    - Port: 1521
-    - Service name: XEPDB1
-    - Username & password
-    
-### 2. Create User **bank_reviews** and Grant Access
-Log in to SQL*Plus as **SYSTEM**:    
-```
-sqlplus system/password@localhost:1521/XEPDB1
-```
-Then run:
+### 2. Database Integration (Oracle XE)
+   
+### 1. Install Oracle XE
 
-```
--- Create user
-CREATE USER bank_reviews IDENTIFIED BY yourpassword;
+    - Download: Oracle XE Downloads
 
--- Grant basic privileges
-GRANT CONNECT, RESOURCE TO bank_reviews;
+### 2. Connection Details
+   
+    1. Note your connection info:
+        - Host: localhost
+        - Port: 1521
+        - Service name: XEPDB1
+        - Username & password : Oracle credentials
 
--- Optionally grant unlimited quota (to avoid tablespace issues)
-ALTER USER bank_reviews QUOTA UNLIMITED ON users;
-```
-### Table Schema
+### 3. Schema Initialization
+- Use the provided SQL dump file to set up the schema:
+  
+        dumps/bank_review.dump.sql
+
+#### Table Schema
 ```
 -- Banks Table
 CREATE TABLE banks (
@@ -156,8 +149,11 @@ CREATE TABLE reviews (
 );
 
 ```
+### 4. Store Cleaned Data to DB
 
-### 3. Connect Using cx_Oracle or Run Notebook to Store Cleaned Data
+- Run the notebook:
+
+        notebooks/store_cleaned_reviews.ipynb
 
 ## Deliverables
 - ✅ Cleaned dataset of app reviews
